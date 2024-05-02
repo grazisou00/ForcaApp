@@ -91,9 +91,8 @@ class _HangmanScreenState extends State<HangmanScreen> {
             ),
     );
   }
-
   Widget _buildGameOverScreen() {
-    String message = _tries == 0 ? 'Você perdeu!' : _gameOver ? 'Você venceu!' : 'Você desistiu!';
+    String message = _tries == 0 ? 'Você perdeu!' : _gameOver ? 'Você venceu!' : '';
     if (_gameOver) {
       _maskedWord = message; 
     }
@@ -104,7 +103,8 @@ class _HangmanScreenState extends State<HangmanScreen> {
           message,
           style: const TextStyle(fontSize: 24),
         ),
-        const SizedBox(height: 20),
+        if (_gameOver) // Adicione esta verificação para exibir o botão apenas se o jogo acabou
+        SizedBox(height: 20),
         ElevatedButton(
           onPressed: () => _resetGame(),
           child: const Text('Jogar Novamente'),
