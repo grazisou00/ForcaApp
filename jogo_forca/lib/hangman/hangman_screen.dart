@@ -103,7 +103,7 @@ class _HangmanScreenState extends State<HangmanScreen> {
           message,
           style: const TextStyle(fontSize: 24),
         ),
-        if (_gameOver) // Adicione esta verificação para exibir o botão apenas se o jogo acabou
+        if (_gameOver)
         SizedBox(height: 20),
         ElevatedButton(
           onPressed: () => _resetGame(),
@@ -140,7 +140,7 @@ class _HangmanScreenState extends State<HangmanScreen> {
       runSpacing: 8.0,
       children: [
         ..._buildAlphabetButtons(),
-        ..._buildSpecialCharacterButtons(['Ç', 'Ã', 'Õ', 'Ê']), // Adiciona botões para caracteres especiais
+        ..._buildSpecialCharacterButtons(['Ç', 'Ã', 'Õ', 'Ê']),
       ],
     );
   }
