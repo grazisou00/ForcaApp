@@ -10,7 +10,7 @@ class HangmanGame extends StatelessWidget {
       title: 'Hangman Game',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Hangman Game'),
+          title: Text('Jogo da forca'),
         ),
         body: HangmanScreen(),
       ),
